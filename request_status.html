@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>request status IITGN</title>
+    <link href="CSS/request_status.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="header">
+        <h1>Request Status</h1>
+    </div>
+
+    <div class="top-bar">
+        <div class="sort">
+            <label for="sort-order">Sort by:</label>
+            <select id="sort-order">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search queries...">
+        </div>
+        <button id="logout">Logout</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Type</th>
+                    <th>Media/Link</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="query-table">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="request_status.js"></script>
+</body>
+</html>

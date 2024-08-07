@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Issue tracker</title>
+    <link href="CSS/main_page.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Issue Tracker</h1>
+    </div>
+
+    <div class="topp">
+      <div class="clg">
+        <p class="clg_name">IIT Gandhinagar</p>
+        <img class="clg_logo" src="images/iitgn_logo.png" alt="" />
+      </div>
+
+      <div class="icons">
+        <p class="helpdesk"><a href="help_desk.html"> Help desk</a></p>
+        <p class="status"><a href="request_status.html">Request status</a></p>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h2>Fill the Query Form</h2>
+      <form class="query-form" id="query-form">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          autocomplete="name"
+          required
+        />
+
+        <label for="department">Department:</label>
+        <input
+          type="text"
+          id="department"
+          name="department"
+          placeholder="Enter your department"
+          autocomplete="department"
+          required
+        />
+
+        <label for="query-type">Query Type:</label>
+        <select id="query-type" name="query-type" autocomplete="off" required>
+          <option value="select">Select...</option>
+          <option value="academic">Academic</option>
+          <option value="hostel">Hostel</option>
+          <option value="administrative">Administrative</option>
+          <option value="technical">Technical</option>
+        </select>
+
+        <div id="description-container" style="display: none">
+          <label for="description">Description:</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Enter description"
+            maxlength="500"
+            autocomplete="off"
+            required
+          ></textarea>
+        </div>
+
+        <label for="media">Upload Media (Max 50MB):</label>
+        <input type="file" id="media" name="media" />
+
+        <button type="submit">Submit Query</button>
+      </form>
+    </div>
+
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <img src="images/success.png" alt="Success" class="modal-icon" />
+          <h2>Success!</h2>
+          <p>Query submitted successfully.</p>
+          <button id="modalOkButton">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
